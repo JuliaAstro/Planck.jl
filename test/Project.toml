@@ -1,2 +1,4 @@
 [deps]
+EnergyTraits = "b654c522-6d66-41bf-922d-a332c0cf7748"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"

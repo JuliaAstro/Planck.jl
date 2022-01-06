@@ -39,6 +39,9 @@ function (bb::QBlackbody)(::IsWavelength, λ)
     2 * h * c0^2 / λ^5 / expm1(h * c0 / (λ * k * bb.temp))
 end
 
+# assume wavelength by default
+(bb::Blackbody)(x) = bb(IsWavelength(), x)
+(bb::Blackbody)(OT, x) = OT(bb(IsWavelength(), x))
 (bb::Blackbody)(OT, ET::EnergyType, x) = OT(bb(ET, x))
 
 # SI (Hertz, Kelvin)
