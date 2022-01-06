@@ -1,16 +1,16 @@
-using Blackbody
+using Planck
 using Documenter
 
-DocMeta.setdocmeta!(Blackbody, :DocTestSetup, :(using Blackbody); recursive=true)
+DocMeta.setdocmeta!(Planck, :DocTestSetup, :(using Planck); recursive=true)
 
 makedocs(;
-    modules=[Blackbody],
+    modules=[Planck],
     authors="Miles Lucas <mdlucas@hawaii.edu> and contributors",
-    repo="https://github.com/JuliaAstro/Blackbody.jl/blob/{commit}{path}#{line}",
-    sitename="Blackbody.jl",
+    repo="https://github.com/JuliaAstro/Planck.jl/blob/{commit}{path}#{line}",
+    sitename="Planck.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://JuliaAstro.github.io/Blackbody.jl",
+        canonical="https://JuliaAstro.github.io/Planck.jl",
         assets=String[],
     ),
     pages=[
@@ -19,6 +19,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/JuliaAstro/Blackbody.jl",
+    repo="github.com/JuliaAstro/Planck.jl",
     devbranch="main",
 )

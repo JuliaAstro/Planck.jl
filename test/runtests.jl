@@ -1,6 +1,6 @@
-using Blackbody
+using Planck
 using Test
 
-@testset "Blackbody.jl" begin
+@testset "Planck.jl" begin
     # Write your tests here.
 end

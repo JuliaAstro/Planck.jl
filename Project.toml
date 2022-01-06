@@ -1,4 +1,4 @@
-name = "Blackbody"
+name = "Planck"
 uuid = "49ffdefc-b0d8-4915-a1d4-43900e16f762"
 authors = ["Miles Lucas <mdlucas@hawaii.edu> and contributors"]
 version = "0.1.0"

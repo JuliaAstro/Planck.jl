@@ -11,7 +11,7 @@ version = "0.0.1"
 [[deps.Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
-[[deps.Blackbody]]
+[[deps.Planck]]
 path = ".."
 uuid = "49ffdefc-b0d8-4915-a1d4-43900e16f762"
 version = "0.1.0"
