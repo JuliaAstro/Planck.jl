@@ -10,6 +10,12 @@ CurrentModule = Blackbody
 [![Coverage](https://codecov.io/gh/JuliaAstro/Blackbody.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/JuliaAstro/Blackbody.jl)
 [![License](https://img.shields.io/github/license/JuliaAstro/Blackbody.jl?color=yellow)](https://github.com/JuliaAstro/Blackbody.jl/blob/main/LICENSE)
 
+Blackbody radiation curves, with support for Unitful.jl.
+
+## Installation
+
+## Usage
+
 ## API/Reference
 
 ```@index
