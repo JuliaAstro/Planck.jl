@@ -29,7 +29,7 @@ f(λ) = -blackbody(λ, temp)
 res = Optim.optimize(f, 1e-12, 10)
 
 lam = Optim.minimizer(res)
-@test lam ≈ 2.898e-3 / temp rtol=1e-4
+isapprox(lam, 2.898e-3 / temp; rtol=1e-4)
 ```
 
 ## Contributing and Support
