@@ -23,12 +23,6 @@ version = "1.3.0"
 deps = ["Printf"]
 uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
 
-[[deps.EnergyTraits]]
-deps = ["Test"]
-path = "/Users/miles/dev/julia/EnergyTraits"
-uuid = "b654c522-6d66-41bf-922d-a332c0cf7748"
-version = "0.1.0"
-
 [[deps.InteractiveUtils]]
 deps = ["Markdown"]
 uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
