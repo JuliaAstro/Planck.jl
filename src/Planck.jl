@@ -66,6 +66,9 @@ julia> using Unitful
 
 julia> blackbody(6e-7, 5850)
 2.583616647617973e13
+    
+julia> blackbody(Float32, 6e-7, 5850)
+2.5836166f13
 
 julia> blackbody(u"erg/s/cm^2/nm", 600u"nm", 5850u"K")
 2.5836166476179734e7 erg nm⁻¹ cm⁻² s⁻¹

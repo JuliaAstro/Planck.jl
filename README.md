@@ -8,7 +8,7 @@
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://JuliaAstro.github.io/Planck.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://JuliaAstro.github.io/Planck.jl/dev)
 
-Planck radiation curves, with support for Unitful.jl.
+Blackbody radiation curves, with support for Unitful.jl.
 
 ## Installation
 
