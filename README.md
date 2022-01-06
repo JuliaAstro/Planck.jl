@@ -23,14 +23,12 @@ using Optim
 
 # function to minimize
 temp = 5796
-f(X) = -blackbody(first(X), temp)
+f(λ) = -blackbody(λ, temp)
 
-# without AD
-res = Optim.optimize(f, [1e-7 * randn() + 5e-7], NelderMead())
-# with AD
-res_ad = Optim.optimize(f, [1e-7 * randn() + 5e-7], Newton(); autodiff=:forward)
+# bounded between 1 picometer and 10 m
+res = Optim.optimize(f, 1e-12, 10)
 
-lam = first(Optim.minimizer(res_ad))
+lam = Optim.minimizer(res)
 @test lam ≈ 2.898e-3 / temp rtol=1e-4
 ```
 
