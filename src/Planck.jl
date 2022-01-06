@@ -39,14 +39,16 @@ function (bb::QBlackbody)(::IsWavelength, λ)
     2 * h * c0^2 / λ^5 / expm1(h * c0 / (λ * k * bb.temp))
 end
 
+(bb::Blackbody)(OT, ET::EnergyType, x) = OT(bb(ET, x))
+
 # SI (Hertz, Kelvin)
 function (bb::Blackbody)(::IsFrequency, ν)
-    2 * _h * ν^3 / _c0^2 / expm1(_h * ν / (_k * bb.temp))
+    2 * _h * ν^3 / _c0^2 / expm1(_h * ν / (_k * bb.temp)) # W / m^2 / Hz
 end
 
 # SI (meters, Kelvin)
 function (bb::Blackbody)(::IsWavelength, λ)
-    2 * _h * _c0^2 / λ^5 / expm1(_h * _c0 / (λ * _k * bb.temp))
+    2 * _h * _c0^2 / λ^5 / expm1(_h * _c0 / (λ * _k * bb.temp)) # W / m^3
 end
 
 """
