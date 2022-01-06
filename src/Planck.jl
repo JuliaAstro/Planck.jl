@@ -29,7 +29,7 @@ end
 const QBlackbody = Blackbody{<:AbstractQuantity}
 
 (bb::QBlackbody)(x::ET) where {ET} = bb(EType(ET), x)
-(bb::QBlackbody)(OT, x::ET) where {ET} = OT(bb(EType(ET), x))
+(bb::QBlackbody)(OT, x::ET) where {ET} = OT(bb(x))
 
 function (bb::QBlackbody)(::IsFrequency, ν)
     2 * h * ν^3 / c0^2 / expm1(h * ν / (k * bb.temp))
