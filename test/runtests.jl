@@ -11,7 +11,9 @@ using Unitful
     @testset "struct interface" begin
         bb = Blackbody(6000)
         @test bb(545e-9) ≈ 3.079e13 rtol=1e-3
+        @test bb(Float32, 545e-9) ≈ 3.079f13 rtol=1f-3
         @test bb(IsFrequency(), 5e14) ≈ 3.441e-8 rtol=1e-3
+        @test bb(Float32, IsFrequency(), 5e14) ≈ 3.441f-8 rtol=1f-3
 
 
         qbb = Blackbody(6000u"K")
