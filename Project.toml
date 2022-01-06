@@ -3,5 +3,9 @@ uuid = "49ffdefc-b0d8-4915-a1d4-43900e16f762"
 authors = ["Miles Lucas <mdlucas@hawaii.edu> and contributors"]
 version = "0.1.0"
 
+[deps]
+EnergyTraits = "b654c522-6d66-41bf-922d-a332c0cf7748"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
+
 [compat]
 julia = "1.6"
