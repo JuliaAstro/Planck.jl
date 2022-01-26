@@ -10,6 +10,16 @@
 
 Blackbody radiation curves, with support for Unitful.jl.
 
+**TODO (help welcome, not expected)**
+
+- [ ] Documentation
+    * Need at least one example showing easy calculations/plotting
+    * need another example showing fits/gradients
+- [ ] Unit tests
+- [ ] Gradients
+    * Write out some chain rules ([ChainRulesCore.jl](https://github.com/JuliaDiff/ChainRulesCore.jl))
+
+
 ## Installation
 
 ## Usage
@@ -22,14 +32,14 @@ Using [Optim.jl](https://github.com/JuliaNLSolvers/Optim.jl) we can numerically 
 using Optim
 
 # function to minimize
-temp = 5796
-f(λ) = -blackbody(λ, temp)
+Teff = 5796
+f(λ) = -blackbody(λ, Teff)
 
 # bounded between 1 picometer and 10 m
 res = Optim.optimize(f, 1e-12, 10)
 
-lam = Optim.minimizer(res)
-isapprox(lam, 2.898e-3 / temp; rtol=1e-4)
+λ = Optim.minimizer(res)
+isapprox(λ, 2.898e-3 / Teff; rtol=1e-4)
 ```
 
 ## Contributing and Support
