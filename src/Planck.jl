@@ -2,6 +2,7 @@ module Planck
 
 using Unitful
 using Unitful: AbstractQuantity
+using Unitful: 𝐋, 𝐓
 using Unitful: h, c0, k
 
 export blackbody
@@ -11,16 +12,24 @@ const _h = ustrip(u"J*s", h)
 const _c0 = ustrip(u"m/s", c0)
 const _k = ustrip(u"J/K", k)
 
-using Unitful: 𝐋, 𝐓
 
 """
     blackbody([OT], x, T)
 
-Evaluate a blackbody[^1] at `x`, which is in meters by default. If `OT` is given, the output will be converted to that type, which is convenient for unit conversions. Temperature is assumed to be Kelvin.
+Evaluate a blackbody[^1] at `x`, which is in meters by default. If `OT` is
+given, the output will be converted to that type, which is convenient for unit
+conversions. Temperature is assumed to be Kelvin.
+
+# Arguments
+- `OT`: units for intensity, defaulting to SI.
+- `x`: color of light on which to get the intensity.
+       `x` can be wavelength or frequency.
+- `T`: temperature of the blackbody.
 
 !!! warning "Units"
 
-    If you do not use [Unitful.jl](https://github.com/PainterQubits/Unitful.jl), the defaults will be [SI](https://en.wikipedia.org/wiki/International_System_of_Units)
+    If you do not use [Unitful.jl](https://github.com/PainterQubits/Unitful.jl),
+    the defaults will be [SI](https://en.wikipedia.org/wiki/International_System_of_Units).
 
 # Examples
 
