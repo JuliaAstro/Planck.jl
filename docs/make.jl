@@ -2,7 +2,11 @@ using Planck
 using Documenter
 using Documenter.Remotes: GitHub
 
-DocMeta.setdocmeta!(Planck, :DocTestSetup, :(using Planck); recursive=true)
+doctest_setup = quote
+    using Planck
+    ENV["UNITFUL_FANCY_EXPONENTS"] = false
+end
+DocMeta.setdocmeta!(Planck, :DocTestSetup, doctest_setup; recursive=true)
 
 makedocs(;
     modules=[Planck],
