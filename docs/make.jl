@@ -1,12 +1,13 @@
 using Planck
 using Documenter
+using Documenter.Remotes: GitHub
 
 DocMeta.setdocmeta!(Planck, :DocTestSetup, :(using Planck); recursive=true)
 
 makedocs(;
     modules=[Planck],
     authors="Miles Lucas <mdlucas@hawaii.edu> and contributors",
-    repo="https://github.com/JuliaAstro/Planck.jl/blob/{commit}{path}#{line}",
+    repo=GitHub("JuliaAstro/Planck.jl"),
     sitename="Planck.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
