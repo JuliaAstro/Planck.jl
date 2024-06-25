@@ -26,4 +26,5 @@ makedocs(;
 deploydocs(;
     repo="github.com/JuliaAstro/Planck.jl",
     devbranch="main",
+    push_preview=true,
 )
