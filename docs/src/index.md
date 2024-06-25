@@ -14,6 +14,20 @@ Planck radiation curves, with support for Unitful.jl.
 
 ## Installation
 
+Planck.jl has not yet been added to the Julia general repository and cannot be
+installed using by using default options on Julia's built-in package manager `Pkg`.
+To install from the development repository, you can supply the URL of the
+repository to `]add` like so:
+```julia-repl
+julia> ] # pressing ']' should drop you into pkg mode
+
+pkg> add https://github.com/JuliaAstro/Planck.jl
+```
+Or using `Pkg.add(url=...)` from the main REPL like so:
+```julia-repl
+julia> import Pkg; Pkg.add(url="https://github.com/JuliaAstro/Planck.jl")
+```
+
 ## Usage
 
 ## API/Reference
