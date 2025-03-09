@@ -68,7 +68,7 @@ jobs:
           using Pkg
           Pkg.add("Aqua")
       - name: Run Aqua tests
-        shell: julia --color-yes --project=@. {0}
+        shell: julia --color=yes --project=@. {0}
         run: |
           using Aqua, Planck
           Aqua.test_all(Planck)
