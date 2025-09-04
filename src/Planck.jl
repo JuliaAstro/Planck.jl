@@ -1,17 +1,11 @@
 module Planck
 
-using Unitful
-using Unitful: AbstractQuantity
-using Unitful: 𝐋, 𝐓
-using Unitful: h, c0, k
-
 export blackbody
 
 # constants in SI units
-const _h = ustrip(u"J*s", h)
-const _c0 = ustrip(u"m/s", c0)
-const _k = ustrip(u"J/K", k)
-
+const _h = 6.62607015e-34
+const _c0 = 299792458
+const _k = 1.380649e-23
 
 """
     blackbody([OT], x, T)
@@ -51,13 +45,6 @@ julia> blackbody(u"erg/s/cm^2/nm/sr", 600u"nm", 5850u"K")
 """
 blackbody(OT, x, T) = OT(blackbody(x, T))
 
-function blackbody(ν::AbstractQuantity{V,inv(𝐓)}, T) where V
-    2 * h * ν^3 / c0^2 / expm1(h * ν / (k * T))
-end
-
-function blackbody(λ::AbstractQuantity{V,𝐋}, T) where V
-    2 * h * c0^2 / λ^5 / expm1(h * c0 / (λ * k * T))
-end
 
 # SI (meters, Kelvin)
 function blackbody(λ, T)
@@ -65,4 +52,4 @@ function blackbody(λ, T)
 end
 
 
-end
+end # end
