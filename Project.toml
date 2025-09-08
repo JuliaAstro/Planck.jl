@@ -4,8 +4,18 @@ authors = ["Miles Lucas <mdlucas@hawaii.edu> and contributors"]
 version = "0.1.0"
 
 [deps]
+TestItemRunner = "f8b46487-2199-4994-9208-9a1283c18c0a"
+
+[weakdeps]
+DynamicQuantities = "06fc5a27-2a28-4c7c-a15d-362465fb6821"
 Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 
+[extensions]
+PlanckDynamicQuantitiesExt = "DynamicQuantities"
+PlanckUnitfulExt = "Unitful"
+
 [compat]
+DynamicQuantities = "1, 1.8"
+TestItemRunner = "1.1.0"
 Unitful = "1"
-julia = "1.6"
+julia = "1.10"
