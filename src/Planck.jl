@@ -2,6 +2,8 @@ module Planck
 
 export blackbody
 
+using TestItemRunner: @testitem
+
 # constants in SI units
 const _h = 6.62607015e-34
 const _c0 = 299792458
@@ -49,6 +51,13 @@ blackbody(OT, x, T) = OT(blackbody(x, T))
 # SI (meters, Kelvin)
 function blackbody(λ, T)
     2 * _h * _c0^2 / λ^5 / expm1(_h * _c0 / (λ * _k * T)) # W / m^3
+end
+
+@testitem "Known temperatures" begin
+    using Planck, Unitful
+
+    @test blackbody(545e-9, 6000) ≈ 3.079e13 rtol=1e-3
+    @test blackbody(Float32, 545e-9, 6000) ≈ 3.079f13 rtol=1f-3
 end
 
 
