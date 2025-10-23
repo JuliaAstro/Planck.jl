@@ -1,3 +1,8 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+> [!WARNING]
+> This package is archived and will no longer be maintained. The functionality in this unregistered package is [available in Korg.jl](https://ajwheeler.github.io/Korg.jl/stable/devdocs/#Korg.blackbody-Tuple%7BAny,%20Any%7D).
+
 # Planck.jl
 
 [![Build Status](https://github.com/JuliaAstro/Planck.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/JuliaAstro/Planck.jl/actions/workflows/CI.yml?query=branch%3Amain)
